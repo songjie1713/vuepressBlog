@@ -1,25 +1,26 @@
 #!/usr/bin/env sh
 
-# ȷ���ű��׳������Ĵ���
+# 确保脚本抛出遇到的错误
 set -e
 
-# ���ɾ�̬�ļ�
+# 生成静态文件
 npm run build
 
-# �������ɵ��ļ���
+# 进入生成的文件夹
 cd docs/.vuepress/dist
 
-# ����Ƿ������Զ�������
+# 如果是发布到自定义域名
 echo 'www.songjie.网址' > CNAME
 
 git init
 git add -A
 git commit -m 'deploy'
 
-# �������Ҫ���� https://songjie1713.github.io
+# 如果你想要部署到 https://<USERNAME>.github.io
 git push -f git@github.com:songjie1713/songjie1713.github.io.git master
 
-# ��������� https://songjie1713.github.io/<REPO>  REPO=github�ϵ���Ŀ
-# git push -f git@github.com:songjie1713/vuepress.git master:gh-pages
+
+# 如果发布到 https://<USERNAME>.github.io/<REPO>  REPO=github上的项目
+# git push -f git@github.com:<USERNAME>/vuepress.git master:gh-pages
 
 cd -
