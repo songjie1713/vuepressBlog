@@ -1,25 +1,25 @@
 #!/usr/bin/env sh
 
-# È·±£½Å±¾Å×³öÓöµ½µÄ´íÎó
+# È·ï¿½ï¿½ï¿½Å±ï¿½ï¿½×³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½
 set -e
 
-# Éú³É¾²Ì¬ÎÄ¼þ
+# ï¿½ï¿½ï¿½É¾ï¿½Ì¬ï¿½Ä¼ï¿½
 npm run build
 
-# ½øÈëÉú³ÉµÄÎÄ¼þ¼Ð
+# ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Éµï¿½ï¿½Ä¼ï¿½ï¿½ï¿½
 cd docs/.vuepress/dist
 
-# Èç¹ûÊÇ·¢²¼µ½×Ô¶¨ÒåÓòÃû
-echo 'www.zhangyunchen.cc' > CNAME
+# ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+echo 'www.songjie.ç½‘å€' > CNAME
 
 git init
 git add -A
 git commit -m 'deploy'
 
-# Èç¹ûÄãÏëÒª²¿Êðµ½ https://<USERNAME>.github.io
-git push -f git@github.com:zhangyunchencc/zhangyunchencc.github.io.git master
+# ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ https://songjie1713.github.io
+git push -f git@github.com:songjie1713/songjie1713.github.io.git master
 
-# Èç¹û·¢²¼µ½ https://<USERNAME>.github.io/<REPO>  REPO=githubÉÏµÄÏîÄ¿
-# git push -f git@github.com:<USERNAME>/vuepress.git master:gh-pages
+# ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ https://songjie1713.github.io/<REPO>  REPO=githubï¿½Ïµï¿½ï¿½ï¿½Ä¿
+# git push -f git@github.com:songjie1713/vuepress.git master:gh-pages
 
 cd -
